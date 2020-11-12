@@ -1,5 +1,9 @@
+// Type inference works because variable has been declared and initialized
 let apples: number = 5;
-console.log(apples);
+
+// Type inference dont work below
+let orange;
+orange = 'fruit';
 
 let speed: string = 'fast';
 let hasName: boolean = true;
