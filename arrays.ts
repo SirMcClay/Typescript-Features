@@ -19,3 +19,9 @@ carMakers.push('fiat');
 carMakers.map((carPick: string): string => {
   return carPick.toUpperCase();
 });
+
+// Flexible types
+const importantDates: (Date | string)[] = [];
+importantDates.push('2030-10-10');
+importantDates.push(new Date());
+// importantDates.push(100); ERR
