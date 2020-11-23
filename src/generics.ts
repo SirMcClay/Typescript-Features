@@ -23,3 +23,6 @@ class ArrayOfAnything<T> {
 }
 
 new ArrayOfAnything<string>(['a', 'b', 'c']);
+
+// Typescript inference
+const arr = new ArrayOfAnything(['a', 'b', 'c']);
