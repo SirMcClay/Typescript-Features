@@ -25,6 +25,7 @@
 		"no-empty-function": "off",
 		"no-tabs": "off",
 		"indent": "off",
-		"no-new": "off"
+		"no-new": "off",
+		"no-use-before-define": "off"
 	}
 }
