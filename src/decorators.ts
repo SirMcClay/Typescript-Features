@@ -5,7 +5,7 @@ class Boat {
 		return `This boats color is ${this.color}`;
 	}
 
-	@testDecorator
+	// @testDecorator
 	pilot(): void {
 		console.log('swish');
 	}
@@ -15,3 +15,5 @@ function testDecorator(target: any, key: string): void {
 	console.log('Target:', target);
 	console.log('Key:', key);
 }
+
+testDecorator(Boat.prototype, 'pilot');
