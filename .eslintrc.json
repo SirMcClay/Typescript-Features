@@ -28,6 +28,7 @@
 		"no-new": "off",
 		"no-use-before-define": "off",
 		"no-unreachable": "off",
-		"no-param-reassign": "off"
+		"no-param-reassign": "off",
+		"comma-dangle": "off"
 	}
 }
