@@ -4,11 +4,28 @@ const plane = {
 	color: 'red',
 };
 
-Reflect.defineMetadata('note', 'hi there', plane, 'color');
+class Plane {
+	color: string = 'red';
 
-const note = Reflect.getMetadata('note', plane, 'color');
+	@markFunction
+	fly(): void {
+		console.log('vrrrrrr');
+	}
+}
 
-console.log(note);
+function markFunction(target: Plane, key: string) {
+	Reflect.defineMetadata('secret', 123, target, key);
+}
+
+const secret = Reflect.getMetadata('secret', Plane.prototype, 'fly');
+
+console.log(secret);
+
+// Reflect.defineMetadata('note', 'hi there', plane, 'color');
+
+// const note = Reflect.getMetadata('note', plane, 'color');
+
+// console.log(note);
 
 // Reflect.defineMetadata('note', 'hi there', plane);
 // Reflect.defineMetadata('height', 10, plane);
