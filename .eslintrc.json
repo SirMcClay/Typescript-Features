@@ -26,6 +26,8 @@
 		"no-tabs": "off",
 		"indent": "off",
 		"no-new": "off",
-		"no-use-before-define": "off"
+		"no-use-before-define": "off",
+		"no-unreachable": "off",
+		"no-param-reassign": "off"
 	}
 }
