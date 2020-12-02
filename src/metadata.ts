@@ -7,14 +7,16 @@ const plane = {
 class Plane {
 	color: string = 'red';
 
-	@markFunction
+	@markFunction('123')
 	fly(): void {
 		console.log('vrrrrrr');
 	}
 }
 
-function markFunction(target: Plane, key: string) {
-	Reflect.defineMetadata('secret', 123, target, key);
+function markFunction(secretInfo: string) {
+	return function (target: Plane, key: string) {
+		Reflect.defineMetadata('secret', secretInfo, target, key);
+	};
 }
 
 const secret = Reflect.getMetadata('secret', Plane.prototype, 'fly');
